@@ -1,6 +1,11 @@
 package homework
 
+import "fmt"
+
 func reverse(input []int64) (result []int64) {
-	//Place your code here
-	return
+	for i:=0; i < len(input)/2; i = i + 1 {
+		var j int = input - 1 - i
+		input[i], input[j] = input[j], input[i]
+	}
+	return input
 }
