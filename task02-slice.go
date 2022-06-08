@@ -18,5 +18,6 @@ func reverse(input []int64) (result []int64) {
 	copyinput := make([]int64, 5)
 	copy(copyinput, input)
 	sort.Sort(sort.Reverse(Inputing(copyinput)))
+	result = copyinput
 	return result
 }
