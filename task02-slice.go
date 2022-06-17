@@ -11,11 +11,11 @@ func (a Inputing) Swap(i, j int) {
 	a[i], a[j] = a[j], a[i]
 }
 func (a Inputing) Less(i, j int) bool {
-	return a[i] < a[j]
+	return i < j
 }
 
 func reverse(input []int64) (result []int64) {
-	copyinput := make([]int64, 5)
+	copyinput := make([]int64, len(input))
 	copy(copyinput, input)
 	sort.Sort(sort.Reverse(Inputing(copyinput)))
 	result = copyinput
