@@ -6,7 +6,7 @@ package homework
 //output -> 3.5
 
 func average(input [15]float32) (result float32) {
-	var numUnits int = 1
+	var numUnits int = 0
 	var sum float32 = 0
 	for i := 0; i < len(input); i++ {
 		if input[i] > 0 {
