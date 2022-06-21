@@ -6,6 +6,8 @@ package homework
 // Output -> (15, 5, 2, 1)
 
 func reverse(input []int64) (result []int64) {
-	//Place your code here
-	return
+	for i := len(input) - 1; i >= 0; i-- {
+		result = append(result, input[i])
+	}
+	return result
 }
