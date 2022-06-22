@@ -2,22 +2,10 @@ package homework
 
 import "sort"
 
-type Inputing []int64
-
-func (a Inputing) Len() int {
-	return len(a)
-}
-func (a Inputing) Swap(i, j int) {
-	a[i], a[j] = a[j], a[i]
-}
-func (a Inputing) Less(i, j int) bool {
-	return i < j
-}
-
 func reverse(input []int64) (result []int64) {
-	copyinput := make([]int64, len(input))
-	copy(copyinput, input)
-	sort.Sort(sort.Reverse(Inputing(copyinput)))
-	result = copyinput
+	sort.Slice(input, func(i, j int) bool {
+		return input[i] > input[j]
+	})
+	result = input
 	return result
 }
